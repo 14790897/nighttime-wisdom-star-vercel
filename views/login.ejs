@@ -1,0 +1,16 @@
+<%- include('base') %>
+
+<h2 class="mb-3 d-flex  justify-content-center">登录</h2>
+<form action="/login" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label class="form-control-label d-flex  justify-content-center" for="username">Username</label>
+        <input id="username" name="username" class="form-control" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label class="form-control-label d-flex justify-content-center" for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+    </div>
+    <div class="form-group d-flex  justify-content-center">
+        <input type="submit" class="btn btn-primary" value="Login">
+    </div>
+</form>

@@ -1,0 +1,16 @@
+<%- include('base', { messages: messages }) %>
+
+<h2>Home</h2>
+<% if (username) { %>
+    <h3 class="mt-3">欢迎用户：<%= username %></h3>
+<% } %>
+<form method="POST" action="/home" class="mt-3">
+    <div class="form-group">
+        <label for="input_data" class="form-control-label">Input Data</label>
+        <input id="input_data" name="input_data" type="text" class="form-control" size="40" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary">Send Data</button>
+</form>
+<br>
+<h2>History</h2>
+<textarea readonly rows="10" class="form-control"><%= history.join('\n') %></textarea>
