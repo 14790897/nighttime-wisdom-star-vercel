@@ -15,7 +15,7 @@ from celery import Celery
 password = os.environ.get('REDIS_PASSWORD')
 try:
     r = redis.StrictRedis(
-        host='your-redis-host',
+        host='localhost',
         port=6379,
         password=password,  # 使用环境变量中的密码
         db=0,
@@ -102,5 +102,5 @@ def process_data_schedule():
                 time_count = 0
 
 
-if __name__ == '__main__':
-    process_data_schedule.delay()
+# if __name__ == '__main__':
+process_data_schedule.delay()
